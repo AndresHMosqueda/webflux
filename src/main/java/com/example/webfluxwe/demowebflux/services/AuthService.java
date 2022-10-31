@@ -27,7 +27,7 @@ public class AuthService {
     }
 
     public String fetchToken() {
-        System.out.println("ADENTRO DEL fetchToken TOKEN!!!!");
+//        System.out.println("ADENTRO DEL fetchToken TOKEN!!!!");
         String token = null;
         try {
             token = webClientBuilder.build().post().uri("http://localhost:8082/token")
@@ -40,9 +40,9 @@ public class AuthService {
                 tokenBean.setToken(String.valueOf(token));
             }
         } catch (Exception e) {
-            System.out.println("El PUTO ERROR___ " + e.getMessage());
+            System.out.println("ERROR___ " + e.getMessage());
         }
-        System.out.println("El puto token es_____ linea 48_____ " + token);
+//        System.out.println("El puto token es_____ linea 48_____ " + token);
         return token;
     }
 
